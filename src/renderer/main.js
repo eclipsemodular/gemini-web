@@ -6,12 +6,14 @@ import router from './router'
 import store from './store'
 
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-import osc from 'osc'
-// import midi from 'midi'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+import * as osc from 'osc'
+// import * as midi from 'midi'
 
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
-
 Vue.use(osc)
 
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))

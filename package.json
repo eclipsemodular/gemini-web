@@ -14,7 +14,7 @@
     "pack": "npm run pack:main && npm run pack:renderer",
     "pack:main": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.main.config.js",
     "pack:renderer": "cross-env NODE_ENV=production webpack --progress --colors --config .electron-vue/webpack.renderer.config.js",
-    "postinstall": ""
+    "postinstall": "electron-rebuild"
   },
   "build": {
     "productName": "osc-tools",
@@ -54,6 +54,7 @@
     "axios": "^0.18.0",
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.15.0",
+    "jquery": "^3.5.1",
     "midi": "^1.0.0",
     "osc": "^2.4.1",
     "vue": "^2.5.16",

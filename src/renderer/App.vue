@@ -1,5 +1,18 @@
 <template>
-  <div id="app">
+  <div id="app" class="bg-dark text-light vh-100">
+    <b-navbar type="dark" variant="dark" class="shadow">
+    <router-link to="/" class="text-light">
+      <b-navbar-brand>OSC Tools</b-navbar-brand>
+    </router-link>
+
+    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+
+    <b-collapse id="nav-collapse" is-nav>
+      <b-navbar-nav>
+        <router-link to="/settings" class="text-light">Settings</router-link>
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
     <transition name="global-transition" mode="out-in">
           <router-view/>
     </transition>
@@ -14,6 +27,7 @@
 
 <style>
   /* CSS */
+
   /* General Restyling */
 .text-shadow,
 .text-shadow-md,
@@ -74,6 +88,11 @@ button:active,
 button:focus {
   box-shadow: none !important;
 }
+
+a{
+  text-decoration: none !important;
+}
+
 
 /* Transition Styling */
 .global-transition-enter-active, .global-transition-leave-active {
