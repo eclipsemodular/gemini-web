@@ -1,18 +1,25 @@
 <template>
   <div id="app" class="bg-dark text-light vh-100">
-    <b-navbar type="dark" variant="dark" class="shadow">
-    <router-link to="/" class="text-light">
-      <b-navbar-brand>OSC Tools</b-navbar-brand>
-    </router-link>
+      <b-navbar type="dark" variant="dark" class="shadow drag-area">
+        <router-link to="/" class="text-light no-drag">
+          <b-navbar-brand class="no-drag">OSC Tools</b-navbar-brand>
+        </router-link>
 
-    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+        <b-navbar-toggle class="no-drag" target="nav-collapse"></b-navbar-toggle>
 
-    <b-collapse id="nav-collapse" is-nav>
-      <b-navbar-nav>
-        <router-link to="/settings" class="text-light">Settings</router-link>
-      </b-navbar-nav>
-    </b-collapse>
-  </b-navbar>
+        <b-collapse id="nav-collapse" is-nav>
+          <b-navbar-nav>
+            <router-link to="/settings" class="text-light no-drag">Settings</router-link>
+          </b-navbar-nav>
+        </b-collapse>
+        <b-button @click="minimise()" size="sm" class="float-right no-drag" variant="transparent">
+            <b-icon-dash class="border rounded-circle border-dark bg-light my-2 grab" style="width: 20px; height: 20px;" variant="dark"/>
+        </b-button>
+        <b-button @click="quit()" size="sm" class="float-right no-drag" variant="transparent">
+            <b-icon-x class="border rounded-circle border-dark bg-light my-2 grab" style="width: 20px; height: 20px;" variant="dark"/>
+        </b-button>
+    </b-navbar>
+    <br>
     <transition name="global-transition" mode="out-in">
           <router-view/>
     </transition>
@@ -20,13 +27,33 @@
 </template>
 
 <script>
+import { remote } from 'electron'
   export default {
-    name: 'osc-tools'
+    name: 'osc-tools',
+    methods: {
+      minimise() {
+        remote.BrowserWindow.getFocusedWindow().minimize();
+      },
+      quit() {
+        window.close()
+      }
+    }
   }
 </script>
 
 <style>
   /* CSS */
+
+:not(input):not(textarea),
+:not(input):not(textarea)::after,
+:not(input):not(textarea)::before {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+input, button, textarea, :focus {
+    outline: none;
+}
 
   /* General Restyling */
 .text-shadow,
@@ -93,6 +120,16 @@ a{
   text-decoration: none !important;
 }
 
+.drag-area {
+  -webkit-app-region: drag
+}
+.no-drag {
+  -webkit-app-region: no-drag;
+  cursor: auto;
+}
+.grab {
+  cursor: pointer;
+}
 
 /* Transition Styling */
 .global-transition-enter-active, .global-transition-leave-active {
