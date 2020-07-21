@@ -3,9 +3,10 @@
   <b-container>
     <b-row align-v="center" class="text-center">
       <b-col>
-        <h2>MIDI - OSC Scripting</h2>
+        <h2>MIDI - OSC Connections</h2>
       </b-col>
     </b-row>
+    <preset/>
     <br>
     
   </b-container>
@@ -13,12 +14,16 @@
 </template>
 
 <script>
+  import Preset from '../components/Preset.vue'
   export default {
     name: 'home',
     data() {
       return {
         //
       }
+    },
+    components: {
+      Preset
     }
   }
 </script>

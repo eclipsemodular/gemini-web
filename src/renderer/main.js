@@ -9,12 +9,8 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-import * as osc from 'osc'
-// import * as midi from 'midi'
-
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
-Vue.use(osc)
 
 if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.http = Vue.prototype.$http = axios
