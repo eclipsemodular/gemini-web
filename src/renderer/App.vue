@@ -1,25 +1,28 @@
 <template>
   <div id="app" class="bg-dark text-light vh-100">
-      <b-navbar type="dark" variant="dark" sticky class="shadow drag-area">
+      <b-navbar type="dark" sticky class="bg-off-black shadow drag-area py-3">
         <router-link to="/" class="text-light no-drag">
-          <b-navbar-brand class="no-drag grab">Gemini</b-navbar-brand>
+          <b-navbar-brand class="no-drag grab mx-4">Gemini</b-navbar-brand>
         </router-link>
 
         <b-navbar-toggle class="no-drag" target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse id="nav-collapse" is-nav>
+          <b-navbar-nav>
+            <router-link to="/" class="text-light no-drag">Projects</router-link>
+          </b-navbar-nav>
           <!-- <b-navbar-nav>
             <router-link to="/settings" class="text-light no-drag">Settings</router-link>
           </b-navbar-nav> -->
         </b-collapse>
         <b-button to="settings" size="sm" class="float-right no-drag" variant="transparent">
-            <b-icon-gear class="p-1 border rounded-circle border-dark bg-light my-2 grab" style="width: 20px; height: 20px;" variant="dark"/>
+            <b-icon-gear class="p-1 border rounded-circle border-dark bg-light grab" style="width: 22px; height: 22px;" variant="dark"/>
         </b-button>
         <b-button @click="minimise()" size="sm" class="float-right no-drag" variant="transparent">
-            <b-icon-dash class="border rounded-circle border-dark bg-light my-2 grab" style="width: 20px; height: 20px;" variant="dark"/>
+            <b-icon-dash class="border rounded-circle border-dark bg-light grab" style="width: 22px; height: 22px;" variant="dark"/>
         </b-button>
         <b-button @click="quit()" size="sm" class="float-right no-drag" variant="transparent">
-            <b-icon-x class="border rounded-circle border-dark bg-light my-2 grab" style="width: 20px; height: 20px;" variant="dark"/>
+            <b-icon-x class="border rounded-circle border-dark bg-light grab" style="width: 22px; height: 22px;" variant="dark"/>
         </b-button>
     </b-navbar>
     <br>
@@ -59,6 +62,10 @@ input, button, textarea, :focus {
 }
 
   /* General Restyling */
+.text-shadow-sm,
+.text-shadow-small {
+   text-shadow: 2px 2px 2px rgba(80, 80, 80, 0.1)
+}
 .text-shadow,
 .text-shadow-md,
 .text-shadow-medium {
@@ -71,6 +78,21 @@ input, button, textarea, :focus {
 .text-gray {
   color: #6c757d;
 }
+
+.bg-off-black {
+  background-color: #222 !important;
+}
+
+.bg-wilbur {
+  background-color: rgb(62, 199, 62) !important;
+}
+.bg-light-pink {
+  background-color: rgb(255,230,230) !important;
+}
+.bg-light-blue {
+  background-color: rgb(230,230,255) !important;
+}
+
 
 .vh-75 {
   height: 75vh;
@@ -151,5 +173,8 @@ a{
 .hover-light:hover {
   background-color: #f8f9fa !important;
   color: #343a40 !important;
+}
+.hover-invert:hover {
+	filter: invert(100%);
 }
 </style>

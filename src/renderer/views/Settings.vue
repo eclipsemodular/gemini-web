@@ -1,12 +1,13 @@
 <template>
   <b-container>
-    <b-row align-h="center">
+    <b-row align-h="center" align-v="end" class="vh-10">
       <b-col cols="6" class="text-center">
         <h1>Gemini</h1>
         <!-- Add ref that auto updates-->
         <h6 class="text-grey">Version 0.0.1</h6>
       </b-col>
     </b-row>
+    <br>
     <br>
     <b-row align-h="center">
       <b-col cols="6" class="text-center">
@@ -26,8 +27,10 @@
               value="8001"
             ></b-form-input>
           </b-form-group>
-
-          <b-button type="submit" variant="primary">Submit</b-button>
+          
+          <br>
+          <br>
+          <b-button type="submit" block class='bg-off-black border-dark'>Submit</b-button>
         </b-form>
 
       </b-col>
