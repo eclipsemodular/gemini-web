@@ -1,17 +1,20 @@
 <template>
   <div id="app" class="bg-dark text-light vh-100">
-      <b-navbar type="dark" variant="dark" class="shadow drag-area">
+      <b-navbar type="dark" variant="dark" sticky class="shadow drag-area">
         <router-link to="/" class="text-light no-drag">
-          <b-navbar-brand class="no-drag">Gemini</b-navbar-brand>
+          <b-navbar-brand class="no-drag grab">Gemini</b-navbar-brand>
         </router-link>
 
         <b-navbar-toggle class="no-drag" target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse id="nav-collapse" is-nav>
-          <b-navbar-nav>
+          <!-- <b-navbar-nav>
             <router-link to="/settings" class="text-light no-drag">Settings</router-link>
-          </b-navbar-nav>
+          </b-navbar-nav> -->
         </b-collapse>
+        <b-button to="settings" size="sm" class="float-right no-drag" variant="transparent">
+            <b-icon-gear class="p-1 border rounded-circle border-dark bg-light my-2 grab" style="width: 20px; height: 20px;" variant="dark"/>
+        </b-button>
         <b-button @click="minimise()" size="sm" class="float-right no-drag" variant="transparent">
             <b-icon-dash class="border rounded-circle border-dark bg-light my-2 grab" style="width: 20px; height: 20px;" variant="dark"/>
         </b-button>
@@ -137,5 +140,16 @@ a{
 }
 .global-transition-enter, .global-transition-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
+}
+
+
+/* hovers */
+.hover-light {
+  background-color: #343a40 !important;
+  color: #f8f9fa !important;
+}
+.hover-light:hover {
+  background-color: #f8f9fa !important;
+  color: #343a40 !important;
 }
 </style>
