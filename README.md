@@ -1,4 +1,4 @@
-# osc-tools
+# gemini
 
 > An application for scripting OSC
 

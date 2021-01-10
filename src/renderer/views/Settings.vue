@@ -2,7 +2,7 @@
   <b-container>
     <b-row align-h="center">
       <b-col cols="6" class="text-center">
-        <h1>OSC Tools</h1>
+        <h1>Gemini</h1>
         <!-- Add ref that auto updates-->
         <h6 class="text-grey">Version 0.0.1</h6>
       </b-col>

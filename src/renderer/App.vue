@@ -2,7 +2,7 @@
   <div id="app" class="bg-dark text-light vh-100">
       <b-navbar type="dark" variant="dark" class="shadow drag-area">
         <router-link to="/" class="text-light no-drag">
-          <b-navbar-brand class="no-drag">OSC Tools</b-navbar-brand>
+          <b-navbar-brand class="no-drag">Gemini</b-navbar-brand>
         </router-link>
 
         <b-navbar-toggle class="no-drag" target="nav-collapse"></b-navbar-toggle>
@@ -29,7 +29,7 @@
 <script>
 import { remote } from 'electron'
   export default {
-    name: 'osc-tools',
+    name: 'gemini',
     methods: {
       minimise() {
         remote.BrowserWindow.getFocusedWindow().minimize();

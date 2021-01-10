@@ -1,5 +1,5 @@
 {
-  "name": "osc-tools",
+  "name": "gemini",
   "version": "0.0.1",
   "author": "TesseraSkye <39166259+TesseraSkye@users.noreply.github.com>",
   "description": "An application for scripting OSC",
@@ -17,8 +17,8 @@
     "postinstall": "electron-rebuild"
   },
   "build": {
-    "productName": "osc-tools",
-    "appId": "com.tesseraskye.osc-tools",
+    "productName": "gemini",
+    "appId": "com.tesseraskye.gemini",
     "directories": {
       "output": "build"
     },
