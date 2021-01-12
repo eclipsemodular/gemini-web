@@ -1,6 +1,4 @@
-// import midi from 'midi'
-
-const state = {
+let state = {
   projects: {
     
     fakeProject: {
@@ -17,21 +15,31 @@ const state = {
       
     }
     
-  }
+  },
+  recent: "",
 }
 
-const mutations = {
+let mutations = {
   addProject(state, data) {
     state.projects[data.id] = {
       data
     }
-  }
+  },
+
+  setRecent(state, data) {
+    state.recent = data
+  },
 }
 
-const actions = {
-  addProject({commit},data) {
+let actions = {
+  addProject({ commit }, data) {
     commit("addProject", data)
-  }
+  },
+
+  setRecent({ commit }, data) {
+    commit("setRecent", data)
+    console.log("aaaaaaaa")
+  },
 }
 
 export default {

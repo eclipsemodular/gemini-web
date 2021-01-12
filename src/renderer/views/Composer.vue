@@ -2,7 +2,7 @@
   <b-container>
     <b-row align-h="center" class="text-center">
       <b-col>
-        <h1>{{params}}</h1>
+        <h1>Hey. <br> Nothing To see here.</h1>
       </b-col>
     </b-row>
   </b-container>
@@ -17,6 +17,8 @@ export default {
     params() {
       return this.$route.params;
     }
+  },
+  methods: {
   },
   components: {
   },

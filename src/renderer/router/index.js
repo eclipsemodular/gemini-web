@@ -12,25 +12,29 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      meta: {transitionType: 'slide-up'}
     },
 
     {
       path: '/settings',
       name: 'settings',
-      component: Settings
+      component: Settings,
+      meta: {transitionType: 'slide-up'}
     },
 
     {
       path: '/composer',
       name: 'composer',
-      component: Composer
+      component: Composer,
+      meta: {transitionType: 'slide-up'}
     },
 
     //wildcard so that weird requests aren't unhandeled
     {
       path: '*',
-      redirect: '/'
+      redirect: '/',
+      meta: {transitionType: 'fade'}
     }
   ]
 })
