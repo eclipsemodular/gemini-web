@@ -240,4 +240,5 @@ a{
 .hover-invert:hover {
 	filter: invert(100%);
 }
+
 </style>
