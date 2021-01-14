@@ -8,12 +8,7 @@
         <b-navbar-toggle class="no-drag" target="nav-collapse"></b-navbar-toggle>
 
         <b-collapse id="nav-collapse" is-nav>
-          <!-- <b-navbar-nav>
-            <router-link to="/" class="text-light no-drag">Projects</router-link>
-          </b-navbar-nav> -->
-          <!-- <b-navbar-nav>
-            <router-link to="/settings" class="text-light no-drag">Settings</router-link>
-          </b-navbar-nav> -->
+
         </b-collapse>
         <b-button to="settings" size="sm" class="float-right no-drag" variant="transparent">
             <b-icon-gear class="p-1 border rounded-circle border-dark bg-light grab" style="width: 22px; height: 22px;" variant="dark"/>

@@ -4,9 +4,9 @@
       <b-col>
         <h1>Hey. <br> Nothing To see here.</h1>
         <b-button @click="testOSC('/test','1')">CLICK ME</b-button>
-        <b-input-group class="mt-3">
+        <!-- <b-input-group class="mt-3">
           <b-form-input @input="sendSlider()" id="OSCSlider" v-model="value" type="range" min="0" max="100"></b-form-input>
-        </b-input-group>
+        </b-input-group> -->
       </b-col>
     </b-row>
   </b-container>
