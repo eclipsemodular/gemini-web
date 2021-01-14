@@ -24,7 +24,8 @@ function createWindow () {
     frame:false,
     webPreferences: {
       nodeIntegration: true,
-      nodeIntegrationInWorker: true
+      nodeIntegrationInWorker: true,
+      // contextIsolation: true,
     }
   })
   mainWindow.loadURL(winURL)
